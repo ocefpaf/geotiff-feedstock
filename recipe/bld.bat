@@ -1,7 +1,9 @@
-
 :: Had to set TIFF_NAMES, PROJ4_NAMES and JPEG_NAMES to force use of shared libs
 :: Note that zlib and jpeg only get linked in if tiff is linked statically, otherwise
 :: they don't seem to be used (presumeably they are used via libtiff in a dll build).
+
+mkdir build
+cd build
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
@@ -13,7 +15,7 @@ cmake -G "NMake Makefiles" ^
       -D TIFF_NAMES=libtiff_i ^
       -D PROJ4_NAMES=proj_i ^
       -D JPEG_NAMES=libjpeg ^
-      .
+      %SRC_DIR%
 if errorlevel 1 exit 1
 
 nmake
