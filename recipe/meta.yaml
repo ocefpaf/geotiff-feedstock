@@ -12,30 +12,22 @@ source:
 
 build:
   number: 1
-  skip: True  # [win and py36]
-  features:
-    - vc9     # [win and py27]
-    - vc14    # [win and (py35 or py36)]
 
 requirements:
   build:
-    - python  # [win]
     - cmake
-    - toolchain
-    - proj4 4.9.3
-    - zlib 1.2.11
-    - jpeg 9*
-    - libtiff >=4.0.8,<4.0.10
-    - vc 9     # [win and py27]
-    - vc 14    # [win and (py35 or py36)]
+    - {{ compiler('c') }}
+  host:
+    - proj4
+    - zlib
+    - jpeg
+    - libtiff
 
   run:
-    - proj4 4.9.3
-    - zlib 1.2.11
-    - jpeg 9*
-    - libtiff >=4.0.8,<4.0.10
-    - vc 9     # [win and py27]
-    - vc 14    # [win and (py35 or py36)]
+    - proj4
+    - zlib
+    - jpeg
+    - libtiff
 
 test:
   commands:
