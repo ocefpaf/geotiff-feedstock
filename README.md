@@ -17,14 +17,16 @@ to establish a TIFF based interchange format for georeferenced raster imagery.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/geotiff-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/geotiff-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/geotiff-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/geotiff-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/geotiff-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/geotiff-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/geotiff-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/geotiff-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/geotiff-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/geotiff-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/geotiff-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/geotiff-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/geotiff/badges/version.svg)](https://anaconda.org/conda-forge/geotiff)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/geotiff/badges/downloads.svg)](https://anaconda.org/conda-forge/geotiff)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-geotiff-green.svg)](https://anaconda.org/conda-forge/geotiff) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/geotiff.svg)](https://anaconda.org/conda-forge/geotiff) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/geotiff.svg)](https://anaconda.org/conda-forge/geotiff) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/geotiff.svg)](https://anaconda.org/conda-forge/geotiff) |
 
 Installing geotiff
 ==================
