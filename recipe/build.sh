@@ -6,8 +6,7 @@ cmake -D CMAKE_PREFIX_PATH=$PREFIX \
       -D WITH_ZLIB=ON \
       -D WITH_JPEG=ON \
       -D WITH_TIFF=ON \
-      .
+      $SRC_DIR
 
-make
+make -j${CPU_COUNT}
 make install
-
