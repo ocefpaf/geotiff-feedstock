@@ -1,17 +1,15 @@
-{% set name = "geotiff" %}
 {% set version = "1.4.2" %}
-{% set sha256 = "ad87048adb91167b07f34974a8e53e4ec356494c29f1748de95252e8f81a5e6e" %}
 
 package:
-  name: {{ name }}
+  name: geotiff
   version: {{ version }}
 
 source:
-  url: http://download.osgeo.org/geotiff/lib{{ name }}/lib{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: http://download.osgeo.org/geotiff/libgeotiff/libgeotiff-{{ version }}.tar.gz
+  sha256: ad87048adb91167b07f34974a8e53e4ec356494c29f1748de95252e8f81a5e6e
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -22,7 +20,6 @@ requirements:
     - zlib
     - jpeg
     - libtiff
-
   run:
     - proj4
     - zlib
@@ -31,10 +28,9 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libgeotiff.so                 # [linux]
-    - test -f $PREFIX/lib/libgeotiff.dylib              # [osx]
+    - test -f $PREFIX/lib/libgeotiff${SHLIB_EXT}  # [not win]
     - if not exist %LIBRARY_LIB%\\geotiff_i.lib exit 1  # [win]
-    - if not exist %LIBRARY_BIN%\\geotiff.dll exit 1    # [win]
+    - if not exist %LIBRARY_BIN%\\geotiff.dll exit 1  # [win]
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
@@ -43,8 +39,6 @@ about:
   license: MIT
   license_file: LICENSE
   summary: 'TIFF based interchange format for georeferenced raster imagery'
-
-  # The remaining entries in this section are optional, but recommended
   description: |
     GeoTIFF represents an effort by over 160 different remote sensing,
     GIS, cartographic, and surveying related companies and organizations
