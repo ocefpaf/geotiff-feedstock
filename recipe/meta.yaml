@@ -9,7 +9,7 @@ source:
   sha256: ad87048adb91167b07f34974a8e53e4ec356494c29f1748de95252e8f81a5e6e
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -31,8 +31,6 @@ test:
     - test -f $PREFIX/lib/libgeotiff${SHLIB_EXT}  # [not win]
     - if not exist %LIBRARY_LIB%\\geotiff_i.lib exit 1  # [win]
     - if not exist %LIBRARY_BIN%\\geotiff.dll exit 1  # [win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://trac.osgeo.org/geotiff
