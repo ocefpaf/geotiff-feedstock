@@ -4,6 +4,8 @@ channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
+cxx_compiler:
+- vs2015
 jpeg:
 - '9'
 libtiff:
@@ -19,5 +21,8 @@ pin_run_as_build:
     max_pin: x.x
 proj4:
 - 4.9.3
+zip_keys:
+- - c_compiler
+  - cxx_compiler
 zlib:
 - '1.2'
