@@ -1,21 +1,15 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
-build_number_decrement:
-- '1000'
 c_compiler:
-- toolchain_c
+- vs2008
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
+cxx_compiler:
+- vs2008
 jpeg:
 - '9'
 libtiff:
 - 4.0.9
-macos_machine:
-- x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
 pin_run_as_build:
   jpeg:
     max_pin: x
@@ -29,8 +23,6 @@ proj4:
 - 4.9.3
 zip_keys:
 - - c_compiler
-  - channel_sources
-  - channel_targets
-  - build_number_decrement
+  - cxx_compiler
 zlib:
 - '1.2'
