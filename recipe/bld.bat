@@ -21,3 +21,21 @@ if errorlevel 1 exit 1
 
 nmake install
 if errorlevel 1 exit 1
+
+set ACTIVATE_DIR=%PREFIX%\etc\conda\activate.d
+set DEACTIVATE_DIR=%PREFIX%\etc\conda\deactivate.d
+mkdir %ACTIVATE_DIR%
+mkdir %DEACTIVATE_DIR%
+
+copy %RECIPE_DIR%\scripts\activate.bat %ACTIVATE_DIR%\geotiff-activate.bat
+if errorlevel 1 exit 1
+
+copy %RECIPE_DIR%\scripts\deactivate.bat %DEACTIVATE_DIR%\geotiff-deactivate.bat
+if errorlevel 1 exit 1
+
+:: Copy unix shell activation scripts, needed by Windows Bash users
+copy %RECIPE_DIR%\scripts\activate.sh %ACTIVATE_DIR%\geotiff-activate.sh
+if errorlevel 1 exit 1
+
+copy %RECIPE_DIR%\scripts\deactivate.sh %DEACTIVATE_DIR%\geotiff-deactivate.sh
+if errorlevel 1 exit 1
