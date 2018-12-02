@@ -10,7 +10,7 @@ cmake -G "NMake Makefiles" ^
       -D WITH_ZLIB=ON ^
       -D WITH_JPEG=ON ^
       -D WITH_TIFF=ON ^
-      -D TIFF_NAMES=libtiff_i ^
+      -D TIFF_NAMES=tiff ^
       -D PROJ4_NAMES=proj_i ^
       -D JPEG_NAMES=libjpeg ^
       %SRC_DIR%
