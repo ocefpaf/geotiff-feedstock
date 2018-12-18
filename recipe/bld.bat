@@ -8,6 +8,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D WITH_PROJ4=ON ^
       -D WITH_ZLIB=ON ^
+      -D BUILD_SHARED_LIBS=ON ^
       -D WITH_JPEG=ON ^
       -D WITH_TIFF=ON ^
       -D TIFF_NAMES=tiff ^
