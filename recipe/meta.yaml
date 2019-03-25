@@ -12,6 +12,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [win and vc<14]
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libgeotiff
     - {{ pin_subpackage('geotiff', max_pin='x.x') }}
