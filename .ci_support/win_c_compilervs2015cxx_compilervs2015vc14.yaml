@@ -1,11 +1,11 @@
 c_compiler:
-- vs2008
+- vs2015
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2008
+- vs2015
 jpeg:
 - '9'
 libtiff:
@@ -15,14 +15,15 @@ pin_run_as_build:
     max_pin: x
   libtiff:
     max_pin: x
-  proj4:
-    max_pin: x.x.x
+  vc:
+    max_pin: x
   zlib:
     max_pin: x.x
-proj4:
-- 5.2.0
+vc:
+- '14'
 zip_keys:
-- - c_compiler
+- - vc
+  - c_compiler
   - cxx_compiler
 zlib:
 - '1.2'
