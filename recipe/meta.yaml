@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 package:
   name: geotiff
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://download.osgeo.org/geotiff/libgeotiff/libgeotiff-{{ version }}.tar.gz
-  sha256: 1c0bef329c60f770ed128e8b273945100f1a4b5abd161ac61e93bc947b0624dd
+  sha256: f9e99733c170d11052f562bcd2c7cb4de53ed405f7acdde4f16195cd3ead612c
   patches:
     - cmake.patch
 
