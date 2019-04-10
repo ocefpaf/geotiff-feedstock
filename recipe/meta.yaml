@@ -23,12 +23,12 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - proj4 6.0.0
+    - proj4
     - zlib
     - jpeg
     - libtiff
   run:
-    - proj4 6.0.0
+    - proj4
     - zlib
     - jpeg
     - libtiff
